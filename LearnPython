@@ -1,0 +1,34 @@
+from random import randint
+
+Nombre = input("Cuál es tu nombre?")
+
+print( Nombre + " ,he pensado un numero entre el 1 y el 100. Tienes que intentar adivinarlo ")
+Numero_Adivinar = randint(0,100)
+print(Numero_Adivinar)
+
+
+
+#To ask to the player only 8 times 
+for i in range(8):
+
+    Intento_Adivinar = input("Dime que número has pensado.")
+    Intento_Adivinar_int = int(Intento_Adivinar)
+    
+    
+    Intento_String = str(i + 1)
+    print("Es tu intento número " + Intento_String)
+    
+    
+    #Para saber diferenciar entre todos los numeros 
+    if Intento_Adivinar_int > Numero_Adivinar:
+        print("Tú número es más pequeño")
+    
+    elif Intento_Adivinar_int < Numero_Adivinar:
+        print("Tú número es más alto")
+
+    elif Intento_Adivinar_int == Numero_Adivinar:
+        print("Le atinaste con el número " + "," + Nombre)
+        
+        
+
+    
